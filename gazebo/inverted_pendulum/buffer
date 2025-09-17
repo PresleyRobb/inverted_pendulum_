@@ -1,0 +1,9 @@
+<plugin filename="gz-sim-joint-controller-system"
+            name="gz::sim::systems::JointController">
+      <joint_name>cart_slider</joint_name>
+      <use_force_commands>true</use_force_commands>
+      <p_gain>200</p_gain>
+      <i_gain>0</i_gain>
+      <d_gain>5</d_gain>
+      <topic>/cart/cmd_vel</topic>
+    </plugin>
