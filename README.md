@@ -1,6 +1,6 @@
 *Assuming you have ROS 2 Humble and Gazebo Harmonic running on Ubuntu 22.04*
 
-Download ros and gazebo folders
+Download ros2 and gazebo folders
 
 cd ~/ros
 
