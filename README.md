@@ -1,10 +1,11 @@
 *Assuming you have ROS 2 Humble and Gazebo Harmonic running on Ubuntu 22.04*
+*I apologize that the folder is named ros2 and not something like "pendulum_ros" I will fix soon*
 
-Download pendulum_ros and gazebo folders
+Download ros2 and gazebo folders
 
-move pendulum_ros folder into ros_ws
+move ros2 folder into ros_ws
 
-cd ~/ros_ws/pendulum_ros
+cd ~/ros_ws/ros2
 
 colcon build --packages-select crazyflie_pendulum_sim
 
