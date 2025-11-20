@@ -24,7 +24,7 @@ class Control_Node(Node):
         self.y = 0.0    #cart position
         self.theta_dot = 0.0    #pendulum velocity
         self.y_dot = 0  #cart velocity
-        self.target_position = 0.0  # Added missing variable
+        self.target_position = 0.0
         
     def joint_state_callback(self, msg):
         try:
