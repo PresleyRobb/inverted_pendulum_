@@ -13,7 +13,8 @@ class Control_Node(Node):
         self.cmd_pub = self.create_publisher(Twist, '/model/pendulum_cart/cmd_vel', 10)
         #subscribers
         self.odom_sub = self.create_subscription(Odometry, '/model/pendulum_cart/odometry', self.get_odom, 10)
-        self.joint_sub = self.create_subscription(JointState, '/world/pendulum_world/model/pendulum_cart/joint_state', self.joint_state_callback, 10)
+        self.joint_sub1 = self.create_subscription(JointState, '/world/pendulum_world/model/pendulum_cart/joint_state', self.joint_state_callback, 10)
+        self.joint_sub2 = self.create_subscription(JointState, '/joint_states', self.joint_state_callback, 10)
         #state variables
         self.m = 0.1     #pendulum mass
         self.M = 1.0    #cart mass
@@ -38,6 +39,7 @@ class Control_Node(Node):
                 throttle_duration_sec=1.0
             )
         except (ValueError, IndexError):
+            self.get_logger().info("joint state could not be loaded")
             pass
 
     def get_odom(self, msg):
