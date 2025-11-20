@@ -62,7 +62,7 @@ class Control_Node(Node):
     
         self.cmd_pub.publish(cmd)
 
-def main(args=None):  # This should be outside the class!
+def main(args=None):
     rclpy.init(args=args)
     node = Control_Node()
     rclpy.spin(node)
